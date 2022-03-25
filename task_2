@@ -1,0 +1,38 @@
+import java.util.Scanner;
+/*
+2. Направете програма BMI с която да изчислите вашият Body Mass Index.
+--> Пренапишете тази програма като използвате Scanner (за тегло, височина)
+и IF – ELSE IF – ELSE, и отпечатвайте в конзолата „Overweight”, „Normal Weight”, „Underweight“
+
+ */
+public class task_2 {
+    public static void main(String[] args) {
+
+        String overweight = "Overweight";
+        String normalWeight = "Normal Weight";
+        String underweight = "Underweight";
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your weight: ");
+        double weight = scanner.nextDouble();
+        System.out.print("Enter your height: ");
+        double height = scanner.nextDouble();
+
+        double result = weight / (Math.pow(2,height));
+        String ibm;
+        if (result > 18 && result < 25){ 
+            ibm = "Overweight.";
+            System.out.format("Your BMI is %.2f kg/m2. It is ", result, ibm);
+            System.out.println(ibm);
+
+        }
+        else if (result >= 25 && result < 30){
+            ibm = "Normal Weight";
+            System.out.format("Your BMI is %.2f kg/m2. It is ", result, ibm);
+
+        }else if (result > 30){
+            ibm = "Underweight";
+            System.out.format("Your BMI is %.2f kg/m2. It is ", result, ibm);
+        }
+    }
+}
