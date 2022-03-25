@@ -1,1 +1,44 @@
 
+/*
+1. Напишете програма SpringSeason, в която дефинирате 2 int променливи - month & day.
+Програмата трябва да отпечатва true ако денят е между 20ти Март (включително) и 20ти Юни
+(включително) и false в противен случай.
+Булева стойност на израза ? „yes” : “false”
+ */
+
+import java.util.Scanner;
+
+public class SpringSeason {
+
+    public static void main(String[] args) {
+
+        boolean result = false;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Въведете месец: ");
+        int month = scanner.nextInt();
+        System.out.print("Въведете ден: ");
+        int day = scanner.nextInt();
+
+        if((month == 3 && day < 20)){
+            result = false;
+            System.out.println(result);
+        }
+        else if (month == 6 && day > 20){
+            result = false;
+            System.out.println(result);
+        }
+        else if (day > 31){
+            result = false;
+            System.out.println(result);
+        }
+        else if(month < 3 || month > 6){
+            result = false;
+            System.out.println(result);
+        }
+        else {
+            result = true;
+            System.out.println(result);
+        }
+    }
+}
