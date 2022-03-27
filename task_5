@@ -1,0 +1,61 @@
+import java.util.Scanner;
+/*
+5. Напишете програма, която при въвеждане на число от 1 до 12 отпечатва месеца в годината…
+Ако потребителят въведе нещо различно, отпечатайте „Invalid”
+ */
+public class task_5{
+    public static void main(String[] args) {
+
+        int month;
+
+        while (true){
+            System.out.print("Въведете число [1...12]: ");
+            Scanner scanner = new Scanner(System.in);
+             month = scanner.nextInt();
+            if (month >= 1 && month <= 12){
+                break;
+            }else{
+                System.out.print("Невалиден месец. ");
+            }
+        }
+
+        switch (month){
+            case 1:
+                System.out.println("Януари");
+                break;
+            case 2:
+                System.out.println("Февруари");
+                break;
+            case 3:
+                System.out.println("Март");
+                break;
+            case 4:
+                System.out.println("Април");
+                break;
+            case 5:
+                System.out.println("Май");
+                break;
+            case 6:
+                System.out.println("Юни");
+                break;
+            case 7:
+                System.out.println("Юли");
+                break;
+            case 8:
+                System.out.println("Август");
+                break;
+            case 9:
+                System.out.println("Септември");
+                break;
+            case 10:
+                System.out.println("Октомври");
+                break;
+            case 11:
+                System.out.println("Ноември");
+                break;
+            case 12:
+                System.out.println("Декември");
+                break;
+        }
+    }
+}
