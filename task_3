@@ -1,0 +1,21 @@
+/*
+3. Напишете програма, която прочита число от конзолата и отпечатва дали то е четно или нечетно. 
+(Подсказка: използвайте оператора „?:”)
+-- >Използвайте IF – ELSE вместо „?:“
+ */
+
+import java.util.Scanner;
+
+public class Task_3{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int number = scanner.nextInt();
+
+        if(number %2 == 0){
+            System.out.println("The number " + number + " is even");
+        } else{
+            System.out.println("The number " + number + "is odd");
+        }
+    }
+}
